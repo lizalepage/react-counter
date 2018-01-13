@@ -11,10 +11,16 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
      <script type="text/babel">
       class Liza extends React.Component{
+        constructor(props){
+          super(props);
+          this.state = {timeLeft: 100};
+        }
         render(){
           return(
             <div>
-              Today is {this.props.date} !
+              <h1>What we got left</h1>
+              Today is {this.props.date}!
+              <p>Countdown to exam: {this.state.timeLeft} days</p>
             </div>
           );
         }
